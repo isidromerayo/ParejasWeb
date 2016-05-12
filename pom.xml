@@ -127,13 +127,13 @@
 			<artifactId>ParejasPersistencia</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>javax.servlet.jsp</groupId>
 			<artifactId>javax.servlet.jsp-api</artifactId>
 			<version>2.2.1</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>javax.el</groupId>
 			<artifactId>javax.el-api</artifactId>
@@ -158,6 +158,13 @@
 			<version>1.2.2</version>
 		</dependency>
 
+		<!-- Test -->
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+			<version>2.53.0</version>
+			<scope>test</scope>
+		</dependency>
 
 	</dependencies>
 	<parent>
