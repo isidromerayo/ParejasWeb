@@ -78,7 +78,7 @@
 							<groupId>com.curso.maven.practica</groupId>
 							<artifactId>ParejasWeb</artifactId>
 							<type>war</type>
-							<!-- <pingURL>http://localhost:8080/ParejasWeb/index.jsp</pingURL> -->
+							<pingURL>http://localhost:8080/ParejasWeb/index.jsp</pingURL>
 						</deployable>
 					</deployables>
 				</configuration>
