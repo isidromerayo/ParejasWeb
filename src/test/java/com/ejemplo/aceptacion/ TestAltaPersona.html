@@ -1,0 +1,45 @@
+<html xmlns:concordion="http://www.concordion.org/2007/concordion">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Test Alta Persona</title>
+</head>
+<body>
+	<div>
+		<p>En la aplicación se podrá dar de alta los siguiente usuarios,
+			si es correcta se mostrará el nombre</p>
+		<table>
+			<tr>
+				<th>Nombre</th>
+				<th>Edad</th>
+				<th>Altura</th>
+				<th>Sexo</th>
+				<th>Nombre mostrado</th>
+			</tr>
+			<tr
+				concordion:execute="#resultado = testAlta(#nombre, #edad, #altura, #sexo)">
+				<td concordion:set="#nombre">Pau</td>
+				<td concordion:set="#edad">37</td>
+				<td concordion:set="#altura">2.03</td>
+				<td concordion:set="#sexo">H</td>
+				<td concordion:assertEquals="#resultado.nombre">Pau</td>
+			</tr>
+			<tr
+				concordion:execute="#resultado = testAlta(#nombre, #edad, #altura, #sexo)">
+				<td concordion:set="#nombre">Fernando</td>
+				<td concordion:set="#edad">33</td>
+				<td concordion:set="#altura">1.79</td>
+				<td concordion:set="#sexo">H</td>
+				<td concordion:assertEquals="#resultado.nombre">Fernando</td>
+			</tr>
+			<tr
+				concordion:execute="#resultado = testAlta(#nombre, #edad, #altura, #sexo)">
+				<td concordion:set="#nombre">María</td>
+				<td concordion:set="#edad">36</td>
+				<td concordion:set="#altura">1.69</td>
+				<td concordion:set="#sexo">M</td>
+				<td concordion:assertEquals="#resultado.nombre">María</td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>

@@ -30,6 +30,7 @@
 				<configuration>
 					<excludes>
 						<exclude>**/unitarias/*.java</exclude>
+						<exclude>**/aceptacion/*.java</exclude>
 					</excludes>
 					<includes>
 						<include>**/integracion/*.java</include>
@@ -145,7 +146,12 @@
 			<version>2.53.0</version>
 			<scope>test</scope>
 		</dependency>
-
+			<dependency>
+				<groupId>org.concordion</groupId>
+				<artifactId>concordion</artifactId>
+				<version>2.0.2</version>
+				<scope>test</scope>
+			</dependency>
 	</dependencies>
 	<parent>
 		<groupId>com.curso.maven.practica</groupId>
@@ -153,4 +159,28 @@
 		<version>0.0.1-SNAPSHOT</version>
 		<relativePath>../ParejasCore</relativePath>
 	</parent>
+
+	<profiles>
+		<profile>
+			<id>acceptation-test</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-failsafe-plugin</artifactId>
+						<version>2.8</version>
+						<configuration>
+							<excludes>
+								<exclude>**/unitarias/*.java</exclude>
+								<include>**/integracion/*.java</include>
+							</excludes>
+							<includes>
+								<exclude>**/aceptacion/*.java</exclude>
+							</includes>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
 </project>
