@@ -102,11 +102,7 @@
 		</plugins>
 	</build>
 	<dependencies>
-		<dependency>
-			<groupId>com.curso.maven.practica</groupId>
-			<artifactId>ParejasModelo</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
+		<!-- dependencias de los otros proyectos -->
 		<dependency>
 			<groupId>com.curso.maven.practica</groupId>
 			<artifactId>ParejasInterfaces</artifactId>
@@ -127,35 +123,37 @@
 			<artifactId>ParejasPersistencia</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
-
+		<!-- Dependencias WEB -->
 		<dependency>
 			<groupId>javax.servlet.jsp</groupId>
 			<artifactId>javax.servlet.jsp-api</artifactId>
 			<version>2.2.1</version>
 		</dependency>
-
 		<dependency>
 			<groupId>javax.el</groupId>
 			<artifactId>javax.el-api</artifactId>
 			<version>1.1.2</version>
 		</dependency>
-
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>servlet-api</artifactId>
 			<version>2.3</version>
 		</dependency>
-
 		<dependency>
 			<groupId>jstl</groupId>
 			<artifactId>jstl</artifactId>
 			<version>1.2</version>
 		</dependency>
-
+        <!-- Acceso a BBDD -->
 		<dependency>
 			<groupId>commons-dbcp</groupId>
 			<artifactId>commons-dbcp</artifactId>
 			<version>1.2.2</version>
+		</dependency>
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.38</version>
 		</dependency>
 
 		<!-- Test -->
